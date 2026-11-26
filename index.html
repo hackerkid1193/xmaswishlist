@@ -1,9 +1,4 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My Christmas Wishlist</title>
-<style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Christmas Wishlist</title><style>
 :root{color-scheme:light;--paper:#f9f5ed;--ink:#18362d;--red:#a52636;--line:#dfd8cc;--white:#fffdf8}
 *{box-sizing:border-box}[hidden]{display:none!important}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
@@ -45,71 +40,19 @@ input,textarea,select{font:inherit;color:inherit;background:white;border:1px sol
 @media(max-width:820px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.parcel{right:6%;opacity:.62}}
 @media(max-width:550px){.wrap{width:calc(100% - 28px)}.grid,.filters{grid-template-columns:1fr}.parcel{opacity:.3}.hero{min-height:270px}header{min-height:67px}.brand{font-size:18px}}
 @media print{body{background:white}.wrap{width:100%}.control,footer,#status,.parcel,dialog{display:none!important}.hero{color:var(--ink);background:none;box-shadow:none;padding:0;min-height:0}.hero p,.season{color:var(--ink)}h1{font-size:44px}.grid{display:block}.card{break-inside:avoid;margin-bottom:10px}.art{display:none}.details{padding:12px}a.action{color:var(--ink);background:white;border:0;padding:0}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header><div class="brand"><span aria-hidden="true">✦</span>Christmas Wishlist</div><button class="control" id="share">Share wishlist</button></header>
-<main>
-<section class="hero"><div class="parcel" aria-hidden="true"><div class="bow"></div></div><div class="season">December 25 · 2026</div><h1>My Christmas<br>wishlist</h1><p>Gaming setup upgrades and a fresh start with a new phone.</p></section>
-<section aria-labelledby="wishes"><div class="toolbar"><div><h2 id="wishes">My wishes</h2><p class="summary" id="summary">6 wishes · $219.98 in priced gifts still wanted</p></div><button class="primary control" id="add">+ Add a wish</button></div><div class="filters control">
-<label>Find a wish<input type="search" id="search" placeholder="Search gifts or stores"></label>
-<label>Show<select id="filter"><option value="all">All wishes</option><option value="priority">Top picks</option><option value="waiting">Still wishing</option><option value="received">Received</option><option value="fund">Contribution funds</option></select></label>
-<label>Sort by<select id="sort"><option value="added">Order added</option><option value="priority">Top picks first</option><option value="price">Lowest price first</option><option value="name">Name A–Z</option></select></label>
-</div><div class="grid" id="list"></div></section>
-</main>
-<footer class="control" id="footer">Edits are saved in this browser. Store prices can change. <button id="print">Print / Save PDF</button></footer>
-</div>
-<dialog id="editor">
-<form id="form">
-<h2 id="form-title">Edit wish</h2>
-<label>Gift name<input name="name" required="" maxlength="100"></label>
-<label>Gift type<select name="kind"><option value="gift">Gift</option><option value="phone">Contribution fund</option></select></label>
-<label>Store link <input name="url" type="url" placeholder="https://…" maxlength="2048" aria-describedby="link-help"><small class="link-help" id="link-help">Use a public product link. Microlink looks up its preview image.</small></label>
-<label>Price or goal (optional)<input name="price" type="number" min="0" max="9999999" step="0.01" placeholder="USD"></label>
-<label id="saved-field" hidden="">Amount already saved<input name="saved" type="number" min="0" max="9999999" step="0.01" placeholder="USD" disabled=""></label><label class="check"><input type="checkbox" name="priority"> Top pick</label><label class="check"><input type="checkbox" name="received"> Already received</label><label>Why I want it<textarea name="note" rows="3" maxlength="500"></textarea></label>
-<div class="form-actions"><button class="remove" type="button" id="remove">Remove</button><button type="button" id="cancel">Cancel</button><button class="primary">Save wish</button></div>
-</form>
-</dialog>
-<dialog id="sharing"><form method="dialog"><h2>Share wishlist</h2><p>Download a read-only copy to send, or copy the list into a message.</p><div class="form-actions"><button type="button" id="download">Download copy</button><button type="button" id="copy">Copy text</button><button>Done</button></div><label id="manual" hidden="">Copy this text<textarea id="share-text" rows="6" readonly=""></textarea></label></form></dialog>
-<div id="status" role="status"></div>
-<script type="application/json" id="shared-data">[{"id":"monitor","name":"MSI MAG 275CQF E18","url":"https://www.bestbuy.com/product/msi-mag-275cqf-e18-27-rapid-va-lcd-curved-qhd-180hz-0-5ms-freesync-gaming-monitor-with-hdr-readydisplayport-hdmi-black/J3P7TX68P7/sku/6643703","kind":"monitor","category":"Gaming monitor","price":169.99,"note":"I’m building out my gaming setup, and this is the monitor I want for it.\nMOST TOP PICK","image":"52f27454-8505-4fa2-99ee-bb5ea8ff4310","spec":"27-inch curved QHD · 180 Hz","priority":true,"received":false},{"id":"mouse","name":"Corsair Sabre V2 Pro","url":"https://www.bestbuy.com/product/corsair-sabre-v2-pro-ultralight-fps-optical-gaming-mouse-wireless-black/J39TSCH5CW/sku/6637500","kind":"mouse","category":"Gaming mouse","price":49.99,"note":"My old mouse broke, and this one would go with my keyboard. MOST TOP PICK","image":"0e41f98d-b491-4c12-a7ea-b95027e3a3f8","spec":"Ultralight wireless · Black","priority":true,"received":false},{"id":"phone","name":"New phone fund","category":"Contribution fund","kind":"phone","price":null,"note":"My old phone broke, so I’m saving up for a new one. Any amount helps!"},{"id":"e80a625f-3ff3-4de3-8fcd-df009842446e","name":"CORSAIR Microphone","url":"https://www.bestbuy.com/product/corsair-voxara-usb-gaming-condenser-microphone-black/J39TSC92VK/sku/6687555?utm_source=feed&extStoreId=&ref=212&loc=SaleEvent&gclsrc=aw.ds&gad_source=1&gad_campaignid=340159119&gbraid=0AAAAAD-ORIgTLQ5O_px3t1fr0AKcPqAzt&gclid=CjwKCAiAzp_YBhAJEiwASf8kHQkNKq4p5XZDXu3sKRiEdmXwsxU-0OhJFTjjtib3qP5OGW7865NeiBoCI_YQAvD_BwE","kind":"gift","category":"Gift","price":null,"note":"I Currently Don't Have Any Microphone and i always sound quiet when i talk to people on my Computer.","priority":true,"received":false,"previewImage":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/59fceb11-e833-4317-a615-baabe5b33537.png"},{"id":"bd490931-d07c-46c5-a788-c80aac0d6457","name":"Bartending Kit","url":"https://www.amazon.com/ULTIMATE-POUR-Bartender-Cocktail-Bartending/dp/B0DW2BNNXY","kind":"gift","category":"Gift","price":null,"note":"One of my hobbies i like doing and i thought, why not have my own kit?!","priority":false,"received":false,"previewImage":"https://m.media-amazon.com/images/G/01/marketing/prime/2022PrimeBrand/Logos/Prime_Logo_RGB_Prime_Blue_MASTER._CB542735979_.png"},{"id":"67ee46b9-77f8-46fc-a446-a0a58aa6c305","name":"Black Desk","url":"https://www.bestbuy.com/product/aodk-48-inch-gaming-desk-with-led-lights-monitor-stand-cpu-shelf-storage-shelves-for-gaming-and-home-office-carbon-fiber-black/J3R8V65LTV/sku/13309287?utm_medium=feed&fs=tp40p8&utm_source=chatgpt.com","kind":"gift","category":"Gift","price":null,"note":"I am in need of a new desk to makeover my room!","priority":true,"received":false}]</script>
-<script>
+
+.auth-panel{max-width:480px;margin:28px auto;padding:24px;background:var(--white);border:1px solid var(--line);border-radius:16px}.auth-panel h2{margin-bottom:12px}.reservation{border-top:1px solid var(--line);padding-top:10px;font-weight:650}.header-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}button:disabled{opacity:.5;cursor:wait}#account-message{margin:16px 0;color:var(--red)}@media print{.reservation,.private-status{display:none!important}}
+</style></head><body><div class="wrap"><header><div class="brand"><span>✦</span>Christmas Wishlist</div><div class="header-actions control"><button id="family">Account sign in</button><button id="public">Wishlist only</button><button id="logout" hidden>Sign out</button></div></header><main><section class="hero"><div class="parcel" aria-hidden="true"><div class="bow"></div></div><div class="season">December 25 · 2026</div><h1>My Christmas<br>wishlist</h1><p>Gaming setup upgrades and a fresh start with a new phone.</p></section>
+<section id="auth" class="auth-panel" hidden><h2 id="auth-title">Account sign in</h2><p class="summary">Keep Christmas surprises secret.</p><form id="auth-form"><label id="name-field" hidden>Your name<input id="name" maxlength="80" autocomplete="name"></label><label>Email<input id="email" type="email" required autocomplete="email"></label><label>Password<input id="password" type="password" required minlength="8" autocomplete="current-password"></label><button class="primary" id="submit">Sign in</button><button type="button" id="switch">Create an account</button></form><p id="auth-message" role="status"></p></section>
+<p id="account-message" role="status"></p><section id="wishlist"><div class="toolbar"><div><h2>My wishes</h2><p class="summary" id="summary"></p></div><div class="actions"><button id="add-wish" class="primary" hidden>+ Add a wish</button><button id="refresh" hidden>Refresh account</button></div></div><div class="filters control"><label>Find a wish<input id="search" type="search" placeholder="Search gifts or stores"></label><label>Show<select id="filter"><option value="all">All wishes</option><option value="priority">Top picks</option><option value="fund">Contribution funds</option></select></label><label>Sort by<select id="sort"><option value="added">Order added</option><option value="priority">Top picks first</option><option value="price">Lowest price first</option><option value="name">Name A–Z</option></select></label></div><div id="list" class="grid"></div></section></main><footer>Store prices can change.</footer></div><dialog id="wish-editor"><form id="wish-form"><h2>Edit wish</h2><label>Name<input name="name" required maxlength="100"></label><label>Category<input name="category" required maxlength="80"></label><label>Type<select name="kind"><option value="gift">Gift</option><option value="monitor">Monitor</option><option value="mouse">Mouse</option><option value="phone">Contribution fund</option></select></label><label>Price<input name="price" type="number" min="0" step="0.01"></label><label>Store URL<input name="url" type="url"></label><label>Image URL<input name="preview_image" type="url"></label><label>Specifications<input name="spec"></label><label>Note<textarea name="note" rows="3"></textarea></label><label class="check"><input name="priority" type="checkbox">Top pick</label><div class="form-actions"><button type="button" id="cancel-wish">Cancel</button><button class="primary">Save wish</button></div><p id="wish-error" role="status"></p></form></dialog><div id="status" role="status"></div><script type="application/json" id="shared-data">[{"id":"monitor","name":"MSI MAG 275CQF E18","url":"https://www.bestbuy.com/product/msi-mag-275cqf-e18-27-rapid-va-lcd-curved-qhd-180hz-0-5ms-freesync-gaming-monitor-with-hdr-readydisplayport-hdmi-black/J3P7TX68P7/sku/6643703","kind":"monitor","category":"Gaming monitor","price":169.99,"note":"I’m building out my gaming setup, and this is the monitor I want for it.\nMOST TOP PICK","image":"52f27454-8505-4fa2-99ee-bb5ea8ff4310","spec":"27-inch curved QHD · 180 Hz","priority":true,"received":false},{"id":"mouse","name":"Corsair Sabre V2 Pro","url":"https://www.bestbuy.com/product/corsair-sabre-v2-pro-ultralight-fps-optical-gaming-mouse-wireless-black/J39TSCH5CW/sku/6637500","kind":"mouse","category":"Gaming mouse","price":49.99,"note":"My old mouse broke, and this one would go with my keyboard. MOST TOP PICK","image":"0e41f98d-b491-4c12-a7ea-b95027e3a3f8","spec":"Ultralight wireless · Black","priority":true,"received":false},{"id":"phone","name":"New phone fund","category":"Contribution fund","kind":"phone","price":null,"note":"My old phone broke, so I’m saving up for a new one. Any amount helps!"},{"id":"e80a625f-3ff3-4de3-8fcd-df009842446e","name":"CORSAIR Microphone","url":"https://www.bestbuy.com/product/corsair-voxara-usb-gaming-condenser-microphone-black/J39TSC92VK/sku/6687555?utm_source=feed&extStoreId=&ref=212&loc=SaleEvent&gclsrc=aw.ds&gad_source=1&gad_campaignid=340159119&gbraid=0AAAAAD-ORIgTLQ5O_px3t1fr0AKcPqAzt&gclid=CjwKCAiAzp_YBhAJEiwASf8kHQkNKq4p5XZDXu3sKRiEdmXwsxU-0OhJFTjjtib3qP5OGW7865NeiBoCI_YQAvD_BwE","kind":"gift","category":"Gift","price":null,"note":"I Currently Don't Have Any Microphone and i always sound quiet when i talk to people on my Computer.","priority":true,"received":false,"previewImage":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/59fceb11-e833-4317-a615-baabe5b33537.png"},{"id":"bd490931-d07c-46c5-a788-c80aac0d6457","name":"Bartending Kit","url":"https://www.amazon.com/ULTIMATE-POUR-Bartender-Cocktail-Bartending/dp/B0DW2BNNXY","kind":"gift","category":"Gift","price":null,"note":"One of my hobbies i like doing and i thought, why not have my own kit?!","priority":false,"received":false,"previewImage":"https://m.media-amazon.com/images/G/01/marketing/prime/2022PrimeBrand/Logos/Prime_Logo_RGB_Prime_Blue_MASTER._CB542735979_.png"},{"id":"67ee46b9-77f8-46fc-a446-a0a58aa6c305","name":"Black Desk","url":"https://www.bestbuy.com/product/aodk-48-inch-gaming-desk-with-led-lights-monitor-stand-cpu-shelf-storage-shelves-for-gaming-and-home-office-carbon-fiber-black/J3R8V65LTV/sku/13309287?utm_medium=feed&fs=tp40p8&utm_source=chatgpt.com","kind":"gift","category":"Gift","price":null,"note":"I am in need of a new desk to makeover my room!","priority":true,"received":false}]</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
 'use strict';
-const initial = [
-  {id:'monitor',name:'MSI MAG 275CQF E18',category:'Gaming monitor',kind:'monitor',price:169.99,spec:'27-inch curved QHD · 180 Hz',note:'I’m building out my gaming setup, and this is the monitor I want for it.',url:'https://www.bestbuy.com/product/msi-mag-275cqf-e18-27-rapid-va-lcd-curved-qhd-180hz-0-5ms-freesync-gaming-monitor-with-hdr-readydisplayport-hdmi-black/J3P7TX68P7/sku/6643703',image:'52f27454-8505-4fa2-99ee-bb5ea8ff4310'},
-  {id:'mouse',name:'Corsair Sabre V2 Pro',category:'Gaming mouse',kind:'mouse',price:49.99,spec:'Ultralight wireless · Black',note:'My old mouse broke, and this one would go with my keyboard.',url:'https://www.bestbuy.com/product/corsair-sabre-v2-pro-ultralight-fps-optical-gaming-mouse-wireless-black/J39TSCH5CW/sku/6637500',image:'0e41f98d-b491-4c12-a7ea-b95027e3a3f8'},
-  {id:'phone',name:'New phone fund',category:'Contribution fund',kind:'phone',price:null,note:'My old phone broke, so I’m saving up for a new one. Any amount helps!'}
-];
-const $ = id => document.getElementById(id);
-const shared = JSON.parse($('shared-data').textContent);
-const storageKey = 'christmas-wishlist-2026';
-const currency = new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'});
-const editor = $('editor');
-const form = $('form');
-let editing = null;
-let wishes = shared ?? initial;
-let storageWorks = true;
-let statusTimer;
-if (!shared) {
-  try {
-    const saved = JSON.parse(localStorage.getItem(storageKey));
-    if (Array.isArray(saved)) wishes = saved;
-  } catch { storageWorks = false; }
-} else {
-  document.querySelectorAll('.control').forEach(element => element.remove());
-}
-function notify(message) {
-  $('status').textContent = message;
-  clearTimeout(statusTimer);
-  statusTimer = setTimeout(() => { $('status').textContent = ''; }, 4000);
-}
-function save(message) {
-  try { localStorage.setItem(storageKey, JSON.stringify(wishes)); }
-  catch { storageWorks = false; }
-  render();
-  notify(storageWorks ? message : 'Browser storage is unavailable. Download a copy before closing.');
-}
+const $=id=>document.getElementById(id);
+let wishes=JSON.parse($('shared-data').textContent);
+const currency=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'});
+const db=window.supabase?.createClient('https://odoodvoyrkwwxeiqxuio.supabase.co','sb_publishable_El_jvjTqUkCXvbhkSLMCYA_wTa0LDzS');
+let owner=false,wishesReady=false;
+let user=null,approved=false,loaded=false,reservations=[],names=new Map(),familyMode=false,signup=false,epoch=0,busy=false;
 function element(tag, className, content) {
   const result = document.createElement(tag);
   if (className) result.className = className;
@@ -122,39 +65,12 @@ function safeUrl(value) {
     return ['http:', 'https:'].includes(url.protocol) ? url : null;
   } catch { return null; }
 }
-async function loadPreview(wish) {
-  const url = safeUrl(wish.url);
-  if (!url || url.username || url.password) return;
-  url.hash = '';
-  let imageUrl;
-  if (/\.(avif|gif|jpe?g|png|webp)$/i.test(url.pathname)) {
-    imageUrl = url;
-  } else {
-    const endpoint = new URL('https://api.microlink.io/');
-    endpoint.searchParams.set('url', url.href);
-    try {
-      const response = await fetch(endpoint, {
-        credentials:'omit', referrerPolicy:'no-referrer', signal:AbortSignal.timeout(8000)
-      });
-      if (!response.ok) return;
-      const {data} = await response.json();
-      imageUrl = safeUrl(data?.image?.url) ?? safeUrl(data?.logo?.url);
-    } catch { return; }
-  }
-  if (!imageUrl || imageUrl.username || imageUrl.password) return;
-  const current = wishes.find(item => item.id === wish.id);
-  if (!current || current.url !== wish.url || current.kind === 'phone' || current.previewImage) return;
-  current.previewImage = imageUrl.href;
-  try { localStorage.setItem(storageKey, JSON.stringify(wishes)); }
-  catch { storageWorks = false; }
-  render();
-}
 function amount(wish) {
   if (wish.kind === 'phone') return wish.price === null ? 'Any amount' : currency.format(wish.price) + ' goal';
   return wish.price === null ? '' : 'Est. ' + currency.format(wish.price);
 }
 function visibleWishes() {
-  if (shared) return wishes;
+  
   const query = $('search').value.trim().toLowerCase();
   const filter = $('filter').value;
   const matches = wishes.filter(wish => {
@@ -182,7 +98,7 @@ function render() {
   const visible = visibleWishes();
   const count = visible.length === wishes.length ? String(wishes.length) : visible.length + ' of ' + wishes.length;
   const summary = [count + (wishes.length === 1 ? ' wish' : ' wishes')];
-  if (!shared) {
+  if (true) {
     const priced = wishes.filter(wish => !wish.received && wish.kind !== 'phone' && wish.price != null);
     if (priced.length) summary.push(currency.format(priced.reduce((sum,wish) => sum + wish.price,0)) + ' in priced gifts still wanted');
   }
@@ -219,17 +135,6 @@ function render() {
     detail.append(element('p','category',wish.category),element('h3','',wish.name));
     if (wish.priority) detail.append(element('span','pill','Top pick'));
     if (wish.received) detail.append(element('span','pill received','Received'));
-    if (!shared && wish.kind === 'phone' && (wish.saved > 0 || wish.price > 0)) {
-      const saved = wish.saved ?? 0;
-      detail.append(element('p','fund-progress',currency.format(saved) + ' saved'));
-      if (wish.price > 0) {
-        const progress = element('progress');
-        progress.max = wish.price;
-        progress.value = Math.min(saved,wish.price);
-        progress.setAttribute('aria-label','Savings toward ' + wish.name);
-        detail.append(progress);
-      }
-    }
     if (wish.spec) detail.append(element('p','spec',wish.spec));
     if (wish.note) detail.append(element('p','note',wish.note));
     detail.append(element('p','amount',amount(wish)));
@@ -242,124 +147,69 @@ function render() {
       link.rel = 'noopener noreferrer';
       actions.append(link);
     }
-    if (!shared) {
-      const edit = element('button','control','Edit');
-      edit.setAttribute('aria-label','Edit ' + wish.name);
-      edit.addEventListener('click',() => openEditor(wish));
-      const received = element('button','control',wish.received ? 'Undo received' : 'Mark received');
-      received.setAttribute('aria-label',received.textContent + ' · ' + wish.name);
-      received.addEventListener('click',() => {
-        wish.received = !wish.received;
-        save(wish.received ? 'Marked as received.' : 'Moved back to still wishing.');
-      });
-      actions.append(edit,received);
+    if(owner && wishesReady){actions.append(action('Edit',()=>editWish(wish)),action('Remove',()=>removeWish(wish)));}
+    if (!owner && approved && loaded) {
+      const r = reservations.find(x => x.gift_id === wish.id);
+      if (!r) {
+        detail.append(element('span','pill received','Available'));
+        actions.append(action('Reserve gift', () => change(wish.id,'reserve')));
+      } else {
+        detail.append(element('p','reservation', (names.get(r.reserved_by) || 'Family member') + ' has chosen to purchase this.'));
+        detail.append(element('span',r.purchased?'pill received':'pill',r.purchased?'Purchased':'Not purchased yet'));
+        if (r.reserved_by === user?.id) {
+          actions.append(action(r.purchased?'Mark not purchased':'Mark purchased',()=>change(wish.id,'toggle',!r.purchased)));
+          actions.append(action('Release reservation',()=>{if(confirm('Release this reservation?')) change(wish.id,'release');}));
+        }
+      }
     }
     detail.append(actions);
     card.append(art,detail);
     list.append(card);
   });
 }
-function openEditor(wish) {
-  editing = wish ?? null;
-  form.reset();
-  $('form-title').textContent = wish ? 'Edit wish' : 'Add a wish';
-  $('remove').hidden = !wish;
-  if (wish) {
-    for (const key of ['name','url','price','note','saved']) form.elements[key].value = wish[key] ?? '';
-    form.elements.kind.value = wish.kind === 'phone' ? 'phone' : 'gift';
-  }
-  form.elements.priority.checked = Boolean(wish?.priority);
-  form.elements.received.checked = Boolean(wish?.received);
-  updateFundField();
-  editor.showModal();
+
+function action(label,fn){const b=element('button','control private-status',label);b.type='button';b.disabled=busy;b.onclick=fn;return b;}
+function clearPrivate(){epoch++;owner=false;$('add-wish').hidden=true;$('wish-editor').close();approved=false;loaded=false;reservations=[];names.clear();$('refresh').hidden=true;render();}
+function message(t){$('account-message').textContent=t;}
+function publicView(){familyMode=false;clearPrivate();$('auth').hidden=true;$('wishlist').hidden=false;message('');}
+function setSignup(v){signup=v;$('name-field').hidden=!v;$('name').required=v;$('auth-title').textContent=v?'Create account':'Account sign in';$('submit').textContent=v?'Create account':'Sign in';$('switch').textContent=v?'Already have an account? Sign in':'Create an account';$('password').autocomplete=v?'new-password':'current-password';}
+async function refresh(){
+ if(!familyMode||!user||!db)return;
+ const token=++epoch,uid=user.id;
+ const valid=()=>token===epoch&&familyMode&&user?.id===uid;
+ try{
+ const p=await db.from('family_members').select('approved,display_name,is_owner').eq('id',uid).maybeSingle();
+ if(!valid())return;
+ if(p.error)throw p.error;
+ if(p.data?.is_owner){approved=false;loaded=false;reservations=[];names.clear();owner=true;message('Signed in as '+p.data.display_name+' · Wishlist owner');$('refresh').hidden=false;$('add-wish').hidden=!wishesReady;render();return;}
+ owner=false;$('add-wish').hidden=true;
+ if(!p.data?.approved){clearPrivate();message('Your account is waiting for family administrator approval. Refresh after approval.');$('refresh').hidden=false;return;}
+ const [r,n]=await Promise.all([db.from('reservations').select('gift_id,reserved_by,purchased'),db.from('family_members').select('id,display_name')]);
+ if(!valid())return;
+ if(r.error||n.error)throw r.error||n.error;
+ approved=true;loaded=true;reservations=r.data;names=new Map(n.data.map(x=>[x.id,x.display_name]));message('Signed in as '+p.data.display_name+' · Family gift planning');$('refresh').hidden=false;render();
+ }catch(e){if(valid()){clearPrivate();message('Could not load family information: '+e.message);$('refresh').hidden=false;}}
 }
-function updateFundField() {
-  const isFund = form.elements.kind.value === 'phone';
-  $('saved-field').hidden = !isFund;
-  form.elements.saved.disabled = !isFund;
+async function familyView(){familyMode=true;if(!db){message('Account sign in is unavailable. Reload to try again.');return;}if(user){$('auth').hidden=true;$('wishlist').hidden=false;await refresh();}else{$('auth').hidden=false;$('wishlist').hidden=true;}}
+async function change(id,kind,value){if(busy||owner||!approved||!loaded||!familyMode||!user)return;busy=true;render();try{let q=db.from('reservations');let result;if(kind==='reserve')result=await q.insert({gift_id:id,reserved_by:user.id});else if(kind==='toggle')result=await q.update({purchased:value}).eq('gift_id',id).eq('reserved_by',user.id).select('gift_id');else result=await q.delete().eq('gift_id',id).eq('reserved_by',user.id).select('gift_id');if(result.error)throw result.error;if(kind!=='reserve'&&!result.data?.length)throw new Error('Reservation no longer available.');}catch(e){alert(e.code==='23505'?'Someone already reserved this gift.':e.message);}finally{busy=false;await refresh();render();}}
+$('family').onclick=familyView;$('public').onclick=publicView;$('refresh').onclick=()=>{loadWishes();refresh();};$('switch').onclick=()=>setSignup(!signup);
+$('logout').onclick=async()=>{publicView();const {error}=await db.auth.signOut();if(error)message(error.message);};
+$('auth-form').onsubmit=async e=>{e.preventDefault();if(!db)return;const button=$('submit');button.disabled=true;$('auth-message').textContent='Please wait…';try{const email=$('email').value.trim(),password=$('password').value;const name=$('name').value.trim();if(signup&&!name)throw new Error('Enter your name.');const result=signup?await db.auth.signUp({email,password,options:{data:{display_name:name},emailRedirectTo:'https://hackerkid1193.github.io/xmaswishlist/'}}):await db.auth.signInWithPassword({email,password});if(result.error)throw result.error;$('password').value='';if(result.data.session){user=result.data.session.user;$('logout').hidden=false;await familyView();}else{$('auth-message').textContent='Check your email to confirm your account, then sign in. A family administrator must approve your account.';}}catch(err){$('auth-message').textContent=err.message;}finally{button.disabled=false;}};
+
+let editingWish=null, wishSequence=0;
+async function loadWishes(){
+ if(!db)return;const seq=++wishSequence;
+ const {data,error}=await db.from('wishes').select('*').order('sort_order').order('id');
+ if(seq!==wishSequence)return;
+ if(error){$('status').textContent='Could not sync wishlist: '+error.message;return;}
+ wishes=data.map(w=>({...w,price:w.price==null?null:Number(w.price),previewImage:w.preview_image}));wishesReady=true;$('add-wish').hidden=!owner;$('status').textContent='';render();
 }
-function shareText() {
-  return 'My Christmas wishlist\n\n' + wishes.map((wish,index) =>
-    [String(index + 1) + '. ' + wish.name, wish.priority ? 'Top pick' : '', wish.received ? 'Received' : '', wish.spec, amount(wish), wish.note, safeUrl(wish.url)?.href].filter(Boolean).join('\n')
-  ).join('\n\n');
-}
-if (!shared) {
-  $('search').oninput = render;
-  $('filter').onchange = render;
-  $('sort').onchange = render;
-  form.elements.kind.onchange = updateFundField;
-  $('add').onclick = () => openEditor();
-  $('cancel').onclick = () => editor.close();
-  $('remove').onclick = () => {
-    if (!editing || !confirm('Remove this wish?')) return;
-    wishes = wishes.filter(wish => wish.id !== editing.id);
-    editor.close();
-    save('Wish removed.');
-  };
-  form.onsubmit = event => {
-    event.preventDefault();
-    const fields = new FormData(form);
-    const name = fields.get('name').trim();
-    const url = fields.get('url').trim();
-    if (!name || (url && !safeUrl(url))) {
-      notify('Enter a gift name and a valid web link.');
-      return;
-    }
-    const choice = fields.get('kind');
-    const existingProduct = ['mouse','monitor'].includes(editing?.kind) && choice === 'gift';
-    const kind = existingProduct ? editing.kind : choice;
-    const category = existingProduct ? editing.category : kind === 'phone' ? 'Contribution fund' : 'Gift';
-    const price = fields.get('price');
-    const sameLink = url === (editing?.url ?? '');
-    const updated = {id:editing?.id ?? (globalThis.crypto?.randomUUID?.() ?? String(Date.now())), name, url,
-      kind, category, price:price === '' ? null : Number(price), note:fields.get('note').trim(),
-      image:existingProduct && sameLink ? editing.image : undefined, spec:existingProduct ? editing.spec : undefined,
-      priority:fields.has('priority'), received:fields.has('received'),
-      saved:kind === 'phone' ? Number(fields.get('saved') || 0) : undefined,
-      previewImage:kind !== 'phone' && sameLink ? editing?.previewImage : undefined};
-    wishes = editing ? wishes.map(wish => wish.id === editing.id ? updated : wish) : [...wishes,updated];
-    editor.close();
-    save('Wish saved.');
-    if (url && kind !== 'phone' && !updated.image && !updated.previewImage) void loadPreview(updated);
-  };
-  $('share').onclick = () => {
-    $('manual').hidden = true;
-    $('sharing').showModal();
-  };
-  $('print').onclick = () => window.print();
-  $('copy').onclick = async () => {
-    const content = shareText();
-    try {
-      await navigator.clipboard.writeText(content);
-      $('sharing').close();
-      notify('Wishlist copied.');
-    } catch {
-      $('manual').hidden = false;
-      $('share-text').value = content;
-      $('share-text').select();
-    }
-  };
-  $('download').onclick = () => {
-    const clone = document.documentElement.cloneNode(true);
-    clone.querySelector('#shared-data').textContent = JSON.stringify(wishes.map(({saved, ...publicWish}) => publicWish)).replace(/</g,'\\u003c');
-    clone.querySelector('#list').replaceChildren();
-    clone.querySelector('#status').textContent = '';
-    clone.querySelectorAll('dialog').forEach(dialog => dialog.removeAttribute('open'));
-    const url = URL.createObjectURL(new Blob(['<!doctype html>\n',clone.outerHTML],{type:'text/html;charset=utf-8'}));
-    const link = element('a');
-    link.href = url;
-    link.download = 'My Christmas Wishlist.html';
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 3000);
-    $('sharing').close();
-    notify('Read-only copy downloaded.');
-  };
-}
+function editWish(w){if(!owner||!wishesReady)return;editingWish=w||null;const f=$('wish-form');f.reset();for(const k of ['name','category','kind','price','url','preview_image','spec','note'])f.elements[k].value=w?.[k]??({category:'Gift',kind:'gift'}[k]??'');f.elements.priority.checked=!!w?.priority;$('wish-error').textContent='';$('wish-editor').showModal();}
+$('add-wish').onclick=()=>editWish(null);$('cancel-wish').onclick=()=>$('wish-editor').close();
+$('wish-form').onsubmit=async e=>{e.preventDefault();if(!owner||busy)return;const f=new FormData(e.target),old=editingWish;const row={};for(const k of ['name','category','kind','url','preview_image','spec','note'])row[k]=String(f.get(k)||'').trim();if(!row.name||!row.category)return;for(const k of ['url','preview_image'])if(row[k]&&!safeUrl(row[k])){$('wish-error').textContent='Use a valid HTTP or HTTPS URL.';return;}row.price=f.get('price')===''?null:Number(f.get('price'));row.priority=f.has('priority');if(!old){row.id=crypto.randomUUID();row.sort_order=Math.max(0,...wishes.map(w=>w.sort_order||0))+1;}else if(row.url!==old.url)row.image=null;busy=true;try{const result=old?await db.from('wishes').update(row).eq('id',old.id).select('id'):await db.from('wishes').insert(row).select('id');if(result.error||!result.data?.length)throw result.error||new Error('Save denied');$('wish-editor').close();await loadWishes();}catch(err){$('wish-error').textContent=err.message;}finally{busy=false;render();}};
+async function removeWish(w){if(!owner||busy||!confirm('Remove this wish?'))return;busy=true;try{const {data,error}=await db.from('wishes').delete().eq('id',w.id).select('id');if(error||!data?.length)throw error||new Error('Remove denied');await loadWishes();}catch(e){alert(e.message);}finally{busy=false;render();}}
+
+for(const id of ['search','filter','sort'])$(id).addEventListener(id==='search'?'input':'change',render);
 render();
-</script>
-
-
-
-
-
-</body><div id="codex-browser-sidebar-comments-root" style="position: fixed; inset: 0px; pointer-events: none; z-index: 2147483647;"></div></html>
+if(db){loadWishes();setInterval(()=>{if(!busy)loadWishes();},15000);db.auth.onAuthStateChange((event,session)=>{const next=session?.user??null;if(next?.id!==user?.id)clearPrivate();user=next;$('logout').hidden=!user;if(!user&&familyMode){$('auth').hidden=false;$('wishlist').hidden=true;}if(user&&familyMode)setTimeout(familyView,0);});setInterval(()=>{if(familyMode&&user&&!busy)refresh();},15000);window.addEventListener('focus',()=>{if(familyMode&&user&&!busy)refresh();});}
+</script></body></html>
